@@ -70,7 +70,7 @@ async def on_message(message):
     if message.channel.id != reports_channel_id:
         await bot.process_commands(message)  # начать обработку команд (при срабатывании on_message не работает)
         return
-    if not message.content.startswith("<@"):
+    if "<@" not in message.content:
         return
     # изменение бд
     detective_data = detectives.select(SELECT=["week_points", "nickname"], WHERE={"discord_id": message.author.id})[0]
