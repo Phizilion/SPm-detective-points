@@ -120,6 +120,7 @@ async def new_week_command(ctx):
 
 # ручное обновление
 @bot.command()
+@commands.check(is_admin)
 async def update(ctx):
     logger.info("команда обновления")
     await points_update()
@@ -131,14 +132,6 @@ async def update(ctx):
 @commands.check(is_admin)
 async def da(ctx):
     await ctx.send("da")
-
-
-# выполнить код
-@bot.command()
-@commands.is_owner()
-async def eval_code(ctx, *, code):
-    eval(code)
-    logger.info(f"выполенен код от {ctx.author.name} ({ctx.author.id}): {code}")
 
 
 # выполнить sql код
