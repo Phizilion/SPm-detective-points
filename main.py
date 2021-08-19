@@ -1,6 +1,7 @@
 # python minimal version: 3.8
 
 from config import *
+import db_template
 import datetime
 import logging
 import sqllex
@@ -36,7 +37,7 @@ intents = discord.Intents.default()
 intents.members = True
 bot = commands.Bot(command_prefix=command_prefix, activity=discord.Game(name="by Phizilion"), intents=intents)
 
-db = sqllex.SQLite3x(path=db_path)
+db = sqllex.SQLite3x(path=db_path, template=db_template.template)
 detectives = db["detectives"]
 
 

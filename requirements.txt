@@ -1,2 +1,2 @@
-sqllex==0.1.10.4
+sqllex==0.1.10.5
 discord.py==1.7.3
