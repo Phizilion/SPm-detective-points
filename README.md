@@ -1,7 +1,7 @@
-## SPm-detective-points
+# SPm-detective-points
 Бот подсчёта очков для детективов СПм.
 
-# Создайте файл config.py для настройки:
+## Создайте файл config.py для настройки:
 ```python
 TOKEN = ""  # токен бота
 command_prefix = "!"  # префикс команд
