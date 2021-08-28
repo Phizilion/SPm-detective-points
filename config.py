@@ -1,8 +1,3 @@
-# SPm-detective-points
-Бот подсчёта очков для детективов СПм.
-
-## Внесите настройки в config.py:
-```python
 TOKEN = ""  # токен бота
 command_prefix = ""  # префикс команд
 db_path = ""  # путь к базе данных
@@ -18,4 +13,3 @@ logs_channel_id =  # id канала для логов
 user_for_report = # id пользователя для отправки отчётов
 new_week_answer_message = ""  # это сообщение в ответ на команду new_week
 update_answer_message = ""  # это сообщение в ответ на команду update
-```
